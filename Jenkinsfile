@@ -42,7 +42,7 @@ pipeline{
         stage('Build Docker Image'){
             steps{
                sh '''
-                docker build -t $BUILD_NUMBER .
+                docker build -t bmi:$BUILD_NUMBER .
                 git push origin $BUILD_NUMBER
                '''
             }
